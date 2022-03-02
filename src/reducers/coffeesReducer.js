@@ -22,7 +22,6 @@ function coffeesReducer(state = defaultState, action) {
     case types.ADD_TO_CART: {
       shoppingCart = state.shoppingCart.slice();
       shoppingCart.push(action.payload);
-      console.log('shopping cart in reducer: ', shoppingCart);
       return {
         ...state,
         shoppingCart

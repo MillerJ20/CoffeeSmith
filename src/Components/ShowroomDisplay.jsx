@@ -18,7 +18,7 @@ const ShowroomDisplay = props => {
     processes.add(props.coffeesList[i].process);
     regions.add(props.coffeesList[i].region);
     notes.add(props.coffeesList[i].notes);
-    coffees.push(<Coffee coffeeObj={props.coffeesList[i]} />);
+    coffees.push(<Coffee coffeeObj={props.coffeesList[i]} inCart={false} />);
   }
 
   function filterList(coffeesList, property) {

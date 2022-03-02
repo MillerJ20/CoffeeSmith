@@ -13,7 +13,7 @@ const CartDisplay = props => {
 
   const cartContents = [];
   for (let i = 0; i < shoppingCart.length; i++) {
-    cartContents.push(<Coffee coffeeObj={shoppingCart[i]} inCart="true" />)
+    cartContents.push(<Coffee coffeeObj={shoppingCart[i]} inCart={true} />)
   }
 
   return (

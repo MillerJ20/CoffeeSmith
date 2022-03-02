@@ -7,6 +7,8 @@ const Coffee = props => {
 
   const addToCart = coffeeToAdd => dispatch(actions.addCoffeeToCartActionCreator(coffeeToAdd));
 
+  console.log('props in coffee: ', props);
+
   return (
     <div className='coffeeBox'>
       <h1>{props.coffeeObj.name}</h1>
@@ -14,7 +16,7 @@ const Coffee = props => {
       <h2>Roaster: {props.coffeeObj.roaster}</h2>
       <h2>Process: {props.coffeeObj.process}</h2>
       <h2>Tasting Notes: {props.coffeeObj.notes}</h2>
-      <button onClick={() => addToCart(props.coffeeObj)}>Add To Cart</button>
+      {!props.inCart ? <button onClick={() => addToCart(props.coffeeObj)}>Add To Cart</button> : ''}
     </div>
   )
 }
