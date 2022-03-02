@@ -10,6 +10,7 @@ function MainContainer() {
   return (
     <div className="container">
       <h1>Bean Boyz Bean Bundles</h1>
+      <div className="bannerimage"></div>
       <ShowroomContainer />
       <CartContainer />
       <UserLoginContainer />

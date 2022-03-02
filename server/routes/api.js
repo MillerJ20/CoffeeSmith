@@ -14,7 +14,7 @@ router.get("/users",
   }
 )
 
-router.get("/login", 
+router.get("/login",
   usersController.logInUser,
   (req, res) => {
     return res.status(200).json(res.locals.user);
@@ -25,13 +25,13 @@ router.post("/register",
   usersController.register,
   (req, res) => {
     return res.status(201).json(res.locals.user);
-});
+  });
 
 router.get('/',
-  verifyToken,
+  // verifyToken,
   coffeeController.getAllCoffee,
   (req, res) => {
-    return res.status(200).json(res.locals);
+    return res.status(200).json(res.locals.coffees);
   }
 );
 

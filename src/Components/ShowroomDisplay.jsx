@@ -33,8 +33,10 @@ const ShowroomDisplay = props => {
 
   return (
     <div className="displayBox">
-      <h4>Coffees: </h4>
-      {coffees}
+      {/* <h4>Coffees: </h4> */}
+      <div className="coffeeBox">
+        {coffees}
+      </div>
     </div>
   )
 }
